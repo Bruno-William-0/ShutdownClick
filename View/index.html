@@ -2,36 +2,60 @@
 <head>
 <title>Shutdown - Click</title>
 <style>
+html{
+    
+}
 body
 {
-    width: 400px;
-    height: 400px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
     background-color: black;
+    
 }
-
-  img
+.box
+{
+    margin-top: 15%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.img
+{
+    width: 100%;
+}
+ img
   {
-    width: 10%;
-    height: 10%;
+    display: inline;
+    width: 25%;
+    height: 25%;
     border-radius: 20px;
   }
   select
   {
-    width: 8%;
-    height: 8%;
+    width: 10%;
+    height: 10%;
   }
 </style>
+<script>
+    function Shutdown()
+    {
+        var shut = document.getElementById('0').value
+        console.log(shut)
+        fetch(shut)
+    }   
+</script>
 </head>
 <body>
-<div>
-    <select>
-      <option id="0" value="192.168.0.100">PC</option>
-      <option id="1" value="192.168.0.101">Laptop</option>
+<div class="box">
+    <select id="0">
+      <option id="1" value="192.168.0.100:1500/shutdown">PC</option>
+      <option id="2" value="192.168.0.101:1500/shutdown">Laptop</option>
     </select>
-    <div>
-        <img id="2" src="https://cdn-icons-png.flaticon.com/512/929/929466.png">
-        <img id="3" scr="">
-        <img id="4" scr=""> 
+    <div class="img">
+        <img id="3" src="https://cdn-icons-png.flaticon.com/512/929/929466.png" onclick="Shutdown()">
+        <img id="4" src="https://i.pinimg.com/originals/8f/e1/05/8fe105d81b637623d9acaaf38b200082.png">
+        <img id="5" src="https://iconsplace.com/wp-content/uploads/_icons/ffe500/256/png/hibernate-icon-19-256.png"> 
     </div>
 </div>
 </body>
