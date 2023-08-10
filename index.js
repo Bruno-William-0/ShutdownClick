@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import Commands from './Controller/Commands.js'
 
+
 const app = express();
 
 app.use(express.json());
@@ -15,5 +16,6 @@ app.use(cors({
   });*/
 
 app.use('/shutdown', Commands.shutdown)
+app.use('/reboot', Commands.reboot)
 
 app.listen(1500, () => console.log('API Rodando na porta 1500'))

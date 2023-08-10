@@ -1,4 +1,6 @@
 import { exec } from "child_process";
+import { stderr, stdout } from "process";
+import { StringDecoder } from "string_decoder";
 
 
 
@@ -14,6 +16,16 @@ exec('shutdown -s -t 0', (error, stdout, stderr) => {
 }
 );
 }
+
+static async reboot(){
+    exec('shutdown -r', (error, stdout, stderr) =>{
+    if(error){
+        console.log(`Erro: ${error.message}`)
+        return
+    }
+    })
+}
+
 
 }
 
