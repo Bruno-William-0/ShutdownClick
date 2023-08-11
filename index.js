@@ -17,5 +17,6 @@ app.use(cors({
 
 app.use('/shutdown', Commands.shutdown)
 app.use('/reboot', Commands.reboot)
+app.use('/hibernate', Commands.hibernate)
 
 app.listen(1500, () => console.log('API Rodando na porta 1500'))

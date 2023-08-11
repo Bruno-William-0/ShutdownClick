@@ -26,6 +26,16 @@ static async reboot(){
     })
 }
 
+static async hibernate(){
+    exec('shutdown -h', (error, stdout, stderr) => {
+        if(error)
+        {
+            console.log(`Erro:${error.message}`)
+            return
+        }
+    })
+}
+
 
 }
 
